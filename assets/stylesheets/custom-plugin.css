@@ -1,10 +1,45 @@
 // custom plugin css
-.card-header{
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
+.card-header {
+    left: 0;
+    position: absolute;
+    top: -60px;
+    width: 100%;
 }
-.card-top-header{
-	
+.card-top-header {
+    background-color: #ededed;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    height: 60px;
+    position: absolute;
+    width: 100%;
+}
+.center-box {
+    background-color: #fff;
+    border: 1px solid;
+    border-radius: 4px;
+    height: 16px;
+    left: 0;
+    line-height: 100px;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 80px;
+}
+.card-contents {
+    box-sizing: border-box;
+    padding: 10px;
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    font-size: 25px;
+    color: #666;
+}
+.card-contents .faq {
+    float: left;
+}
+.card-contents .trophy{
+	float: right;
 }
