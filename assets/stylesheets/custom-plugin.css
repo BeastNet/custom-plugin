@@ -38,9 +38,22 @@
     color: #666;
     clear: both;
 }
-.card-contents .faq {
-    float: left;
-}
 .card-contents .trophy{
 	float: right;
+}
+.card-faq > span::before {
+    border: 1px solid;
+    border-radius: 100%;
+    color: #666;
+    content: "/f128";
+    font-family: fontawesome;
+    font-size: 30px;
+    padding: 11px;
+    position: absolute;
+}
+.trophy .fa.fa-trophy {
+    border: 1px solid;
+    border-radius: 100%;
+    color: #666;
+    padding: 8px;
 }
