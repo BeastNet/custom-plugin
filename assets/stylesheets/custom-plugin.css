@@ -36,6 +36,7 @@
     width: 100%;
     font-size: 25px;
     color: #666;
+    clear: both;
 }
 .card-contents .faq {
     float: left;
