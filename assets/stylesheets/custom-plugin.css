@@ -1,4 +1,10 @@
 // custom plugin css
+.card-header{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
 .card-top-header{
-	font-size: 30px;
+	
 }
