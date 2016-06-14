@@ -6,10 +6,47 @@ import { wantsNewWindow } from 'discourse/lib/intercept-click';
 
 import { h } from 'virtual-dom';
 
+
+const dropdown = {
+  buildClasses(attrs) {
+    if (attrs.active) { return "active"; }
+  }
+  }
+createWidget('user-avatar', {
+  html(attrs) {
+    const { currentUser } = this;
+
+    const contents = [ avatarImg('medium', { template: currentUser.get('avatar_template'),
+                                             username: currentUser.get('username') }) ];
+
+    return contents;
+  }
+});
+createWidget('user-name', {
+  html(attrs) {
+    const { currentUser } = this;
+    const contents = currentUser.get('username');
+    return contents;
+  }
+});
+
+createWidget('user-detail', jQuery.extend({
+  tagName: 'div.details-container',
+
+  html(attrs) {
+    const { currentUser } = this;
+
+    return h('div.user-details',[h('a.icon', { attributes: { href: currentUser.get('path'), 'data-auto-route': true } },
+             this.attach('user-avatar', attrs)),h('span', this.attach('user-name', attrs))]);
+  }
+}, dropdown));
+
 createWidget('custom-widget',{
-	tagName: 'div.custom-icon',
-	html(){
-		return h('div.icon-content',h('span.custom-icon',"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."));
+	tagName: 'div.slide-bottom',
+	html(attrs){
+		return [h('div.top-box',h('span.center-box')),h('div', [h('a.slide-close',"Close"),h('div', this.attach('user-detail', attrs))]),h('div.bottom-box')];
 	}
 
 })
+
+

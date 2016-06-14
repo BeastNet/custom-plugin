@@ -57,3 +57,63 @@
     color: #666;
     padding: 8px;
 }
+
+.title > a {
+    display: block;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 150px;
+}
+.header-dropdown-toggle {
+    display: inline;
+    list-style: outside none none;
+}
+.header-dropdown-toggle #custom-icon-menu {
+    font-size: 40px;
+}
+.d-header .panel {
+    float: right;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.top-box {
+    background: #ededed none repeat scroll 0 0;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    height: 50px;
+    position: relative;
+}
+.slide-bottom {
+    background: #fff none repeat scroll 0 0;
+    height: 250px;
+    position: relative;
+    width: 400px;
+}
+.bottom-box {
+    background: #ededed none repeat scroll 0 0;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    bottom: -90px;
+    height: 50px;
+    position: relative;
+}
+.slide-close {
+    float: right;
+    margin: 10px;
+}
+.details-container {
+    clear: right;
+}
+.user-details {
+    text-align: center;
+}
+.user-details .icon {
+    display: inline-block;
+    padding-bottom: 8px;
+}
