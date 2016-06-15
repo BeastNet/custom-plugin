@@ -104,7 +104,7 @@ createWidget('user-detail', jQuery.extend({
 createWidget('custom-widget',{
 	tagName: 'div.slide-bottom',
 	html(attrs){
-		return [h('div.top-box'),h('div.main-detail-container', [h('a.slide-close',"Close"),h('div', this.attach('user-detail', attrs))]),h('div.bottom-box')];
+		return [h('div.top-box'),h('div.main-detail-container', [h('a.slide-close',h('i.fa.fa-times',{attributes: {'aria-hidden':true }})),h('div', this.attach('user-detail', attrs))]),h('div.bottom-box')];
 	}
 
 })
