@@ -82,15 +82,7 @@
     top: 0;
 }
 
-.slide-bottom {
-    background: #fff none repeat scroll 0 0;
-    height: 250px;
-    left: 50%;
-    margin: -125px -200px;
-    position: fixed;
-    top: 50%;
-    width: 400px;
-}
+
 .top-box {
     background: #ededed none repeat scroll 0 0;
     border-top-left-radius: 8px;
