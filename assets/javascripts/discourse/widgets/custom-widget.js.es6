@@ -41,7 +41,7 @@ createWidget('header-badge', {
     if (currentUser.moderator) { classNames.push('moderator'); }
     if (currentUser.new_user) { classNames.push('new-user'); }
 
-    const primaryGroupName = attrs.primary_group_name;
+    const primaryGroupName = currentUser.primary_group_name;
     if (primaryGroupName && primaryGroupName.length) {
       classNames.push(primaryGroupName);
     }
@@ -97,14 +97,14 @@ createWidget('user-detail', jQuery.extend({
     const { currentUser } = this;
 
     return h('div.user-details',[h('a.icon', { attributes: { href: currentUser.get('path'), 'data-auto-route': true } },
-             this.attach('user-avatar', attrs)),h('span', this.attach('user-name', attrs))]);
+             this.attach('user-avatar', attrs)),h('span', this.attach('user-name', attrs)),h('span',this.attach('header-badge',attrs))]);
   }
 }, dropdown));
 
 createWidget('custom-widget',{
 	tagName: 'div.slide-bottom',
 	html(attrs){
-		return [h('div.top-box',h('span.center-box')),h('div', [h('a.slide-close',"Close"),h('div', this.attach('user-detail', attrs))]),h('div.bottom-box')];
+		return [h('div.top-box'),h('div.main-detail-container', [h('a.slide-close',"Close"),h('div', this.attach('user-detail', attrs))]),h('div.bottom-box')];
 	}
 
 })
