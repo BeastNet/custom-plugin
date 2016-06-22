@@ -105,11 +105,7 @@
 
           </div>
         </div>
-        <div style='clear: both'></div>
-      </div>
-
-
-      {{#unless collapsedInfo}}
+        {{#unless collapsedInfo}}
       <div class='secondary'>
         <dl>
           {{#if model.created_at}}
@@ -151,6 +147,11 @@
         {{plugin-outlet "user-profile-secondary"}}
       </div>
       {{/unless}}
+        <div style='clear: both'></div>
+      </div>
+
+
+      
     </section>
 
     {{#mobile-nav class='main-nav' desktopClass="nav nav-pills user-nav" currentPath=currentPath}}
