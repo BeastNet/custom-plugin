@@ -4,5 +4,4 @@
 # authors: Pankaj Gupta
 
 register_asset "stylesheets/custom-plugin.css", :desktop
-register_asset "javascripts/discourse/templates/user/user.hbs"
 register_asset "javascripts/discourse/widgets/header.js.es6"
