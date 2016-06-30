@@ -13,7 +13,6 @@ export default {
             iconId: 'custom-icon-menu',
           }));
         }
-          // contents.push(helper.attach('custom-widget'))
           return contents
       })
  		});
