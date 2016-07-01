@@ -299,7 +299,7 @@ export default Ember.Component.extend({
 
     $editorInput.autocomplete({
       template: template,
-      key: "",
+      key: ":",
       afterComplete(text) {
         self.set('value', text);
       },
