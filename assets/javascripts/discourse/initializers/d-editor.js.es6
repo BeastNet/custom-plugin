@@ -8,6 +8,7 @@ export default {
 
   initialize: function (container, $editorInput) {
     const template = container.lookup('template:emoji-selector-autocomplete.raw');
+    const self = this;
     template.reopen({
          $editorInput.autocomplete({
           template: template,
