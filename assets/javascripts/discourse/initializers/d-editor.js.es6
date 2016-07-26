@@ -1,10 +1,4 @@
-import { default as computed, on, observes } from 'ember-addons/ember-computed-decorators';
 import { showSelector } from "discourse/lib/emoji/toolbar";
-import Category from 'discourse/models/category';
-import { categoryHashtagTriggerRule } from 'discourse/lib/category-hashtags';
-import { TAG_HASHTAG_POSTFIX } from 'discourse/lib/tag-hashtags';
-import { search as searchCategoryTag  } from 'discourse/lib/category-tag-search';
-import { SEPARATOR } from 'discourse/lib/category-hashtags';
 import { cook } from 'discourse/lib/text';
 import { translations } from 'pretty-text/emoji/data';
 import { emojiSearch } from 'pretty-text/emoji';
