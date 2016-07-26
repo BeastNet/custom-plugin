@@ -294,14 +294,14 @@ export default Ember.Component.extend({
 
     $editorInput.autocomplete({
       template: template,
-      key: ":",
+      //key: ":",
       afterComplete(text) {
         self.set('value', text);
       },
 
       transformComplete(v) {
         if (v.code) {
-          return `${v.code}:`;
+          return `:${v.code}:`;
         } else {
           showSelector({
             appendTo: self.$(),
@@ -314,7 +314,7 @@ export default Ember.Component.extend({
               selected.pre = newPre;
               selected.start -= numOfRemovedChars;
               selected.end -= numOfRemovedChars;
-              self._addText(selected, `${title}:`);
+              self._addText(selected, `:${title}:`);
             }
           });
           return "";
@@ -323,7 +323,7 @@ export default Ember.Component.extend({
 
       dataSource(term) {
         return new Ember.RSVP.Promise(resolve => {
-          const full = `:${term}`;
+          const full = `${term}`;
           term = term.toLowerCase();
 
           if (term === "") {
