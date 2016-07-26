@@ -6,12 +6,11 @@ import { showSelector } from "discourse/lib/emoji/toolbar";
 export default {
   name: "key-change",
 
-  initialize: function (container) {
-    const TopicProgressView = container.lookupFactory('view:topic-progress');
-TopicProgressView.reopen({
-  
-  
-}
-
+  initialize: function (container, $editorInput) {
+    const template = container.lookup('template:emoji-selector-autocomplete.raw');
+    template.reopen({
+           
+      
+    });
   }
 };
