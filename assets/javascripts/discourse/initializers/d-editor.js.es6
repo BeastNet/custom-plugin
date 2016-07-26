@@ -13,14 +13,14 @@ export default {
     template.reopen({
          $editorInput.autocomplete({
           template: template,
-          //key: "",
+          key: ":",
           afterComplete(text) {
             self.set('value', text);
           },
     
           transformComplete(v) {
             if (v.code) {
-              return `:${v.code}:`;
+              return `${v.code}:`;
             } else {
               showSelector({
                 appendTo: self.$(),
@@ -33,7 +33,7 @@ export default {
                   selected.pre = newPre;
                   selected.start -= numOfRemovedChars;
                   selected.end -= numOfRemovedChars;
-                  self._addText(selected, `:${title}:`);
+                  self._addText(selected, `${title}:`);
                 }
               });
               return "";
@@ -46,14 +46,14 @@ export default {
               term = term.toLowerCase();
     
               if (term === "") {
-                return resolve(["slight_smile", "smile", "wink", "sunny", "blush"]);
+                return resolve(["slight_smile", "smile", "wink", "sunny", "blush", "angry", "angel"]);
               }
     
               if (translations[full]) {
                 return resolve([translations[full]]);
               }
     
-              const options = emojiSearch(term, {maxResults: 5});
+              const options = emojiSearch(term, {maxResults: 7});
     
               return resolve(options);
             }).then(list => list.map(code => {
