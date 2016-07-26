@@ -5,10 +5,10 @@ import { emojiSearch } from 'pretty-text/emoji';
 import { emojiUrlFor } from 'discourse/lib/text';
 
 export default {
-  name: "d-editor",
+  name: "emoji change",
 
   initialize: function (container, $editorInput) {
-    const template = container.lookup('template:emoji-selector-autocomplete.raw');
+    const template = container.lookup('template:emoji-selector-autocomplete');
     const self = this;
     template.reopen({
          $editorInput.autocomplete({
